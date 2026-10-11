@@ -1,0 +1,30 @@
+{
+ "id": 9005,
+ "merchant": "Costco",
+ "merchant_id": 9005,
+ "name": "Weekly Flyer",
+ "valid_from": "2026-07-09T00:00:00-04:00",
+ "valid_to": "2026-07-15T23:59:59-04:00",
+ "categories": [
+  "Groceries"
+ ],
+ "postal_code": "M6S1N3",
+ "locale": "en-ca",
+ "items": [
+  {
+   "id": 500022,
+   "flyer_id": 9005,
+   "name": "KIRKLAND SIGNATURE BLUEBERRIES, 2 kg",
+   "display_type": 1,
+   "brand": "Kirkland Signature",
+   "cutout_image_url": "",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "discount": null,
+   "price": "9.99",
+   "print_id": "SKU500022",
+   "short_name": null,
+   "text_areas": []
+  }
+ ]
+}

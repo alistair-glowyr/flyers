@@ -1,0 +1,95 @@
+{
+ "flyers": [
+  {
+    "id": 9001,
+    "merchant": "No Frills",
+    "merchant_id": 9001,
+    "name": "Weekly Flyer",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "categories": [
+    "Groceries"
+   ],
+   "postal_code": "M6S1N3",
+   "locale": "en-ca"
+  },
+  {
+   "id": 9002,
+   "merchant": "FreshCo",
+   "merchant_id": 9002,
+   "name": "Weekly Flyer",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "categories": [
+    "Groceries"
+   ],
+   "postal_code": "M6S1N3",
+   "locale": "en-ca"
+  },
+  {
+   "id": 9003,
+   "merchant": "Food Basics",
+   "merchant_id": 9003,
+   "name": "Weekly Flyer",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "categories": [
+    "Groceries"
+   ],
+   "postal_code": "M6S1N3",
+   "locale": "en-ca"
+  },
+  {
+   "id": 9004,
+   "merchant": "Loblaws",
+   "merchant_id": 9004,
+   "name": "Weekly Flyer",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "categories": [
+    "Groceries"
+   ],
+   "postal_code": "M6S1N3",
+   "locale": "en-ca"
+  },
+  {
+    "id": 9005,
+    "merchant": "Costco",
+    "merchant_id": 9005,
+    "name": "Costco Grocery",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "categories": [
+    "Groceries"
+   ],
+   "postal_code": "M6S1N3",
+   "locale": "en-ca"
+  },
+  {
+   "id": 9100,
+   "merchant": "Chalo FreshCo",
+   "merchant_id": 9100,
+   "name": "Weekly Flyer",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "categories": [
+    "Groceries"
+   ],
+   "postal_code": "M6S1N3",
+   "locale": "en-ca"
+  },
+  {
+   "id": 9101,
+   "merchant": "Dollarama",
+   "merchant_id": 9101,
+   "name": "Weekly Flyer",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "categories": [
+    "Groceries"
+   ],
+   "postal_code": "M6S1N3",
+   "locale": "en-ca"
+  }
+ ]
+}

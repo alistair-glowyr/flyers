@@ -1,0 +1,24 @@
+{
+ "item": {
+  "id": 500012,
+  "flyer_id": 9002,
+  "name": "BANANAS",
+  "display_type": 1,
+  "brand": null,
+  "cutout_image_url": "",
+  "valid_from": "2026-07-09T00:00:00-04:00",
+  "valid_to": "2026-07-15T23:59:59-04:00",
+  "discount": null,
+  "price": "1.49",
+  "print_id": "SKU500012",
+  "short_name": null,
+  "text_areas": [],
+  "pre_price_text": null,
+  "price_text": "/kg",
+  "sale_story": null,
+  "description": null,
+  "current_price": "1.49",
+  "merchant_id": 9002,
+  "sku": "SKU500012"
+ }
+}

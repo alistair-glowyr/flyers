@@ -1,0 +1,24 @@
+{
+ "item": {
+  "id": 500008,
+  "flyer_id": 9001,
+  "name": "APPLE JUICE, 1.36 L",
+  "display_type": 1,
+  "brand": "Allen's",
+  "cutout_image_url": "",
+  "valid_from": "2026-07-09T00:00:00-04:00",
+  "valid_to": "2026-07-15T23:59:59-04:00",
+  "discount": null,
+  "price": "1.99",
+  "print_id": "SKU500008",
+  "short_name": null,
+  "text_areas": [],
+  "pre_price_text": null,
+  "price_text": null,
+  "sale_story": null,
+  "description": "from concentrate",
+  "current_price": "1.99",
+  "merchant_id": 9001,
+  "sku": "SKU500008"
+ }
+}

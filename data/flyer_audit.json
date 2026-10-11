@@ -1,0 +1,105 @@
+{
+ "generated": "2026-10-10",
+ "postal_code": "M6S1N3",
+ "candidates": [
+  {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8172496,
+   "name": "The Halloween Hub",
+   "valid_from": "2026-10-01",
+   "valid_to": "2026-10-31",
+   "days": 31,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8175990,
+   "name": "Flyer",
+   "valid_from": "2026-10-08",
+   "valid_to": "2026-10-14",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "FreshCo",
+   "merchant": "FreshCo",
+   "flyer_id": 8174309,
+   "name": "Weekly eFlyer 10/08 - 10/14",
+   "valid_from": "2026-10-08",
+   "valid_to": "2026-10-14",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "Loblaws",
+   "merchant": "Loblaws",
+   "flyer_id": 8174097,
+   "name": "Weekly Flyer - Valid Thursday, October 8 - Wednesday, October 14",
+   "valid_from": "2026-10-08",
+   "valid_to": "2026-10-14",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8110584,
+   "name": "Ready for Fall",
+   "valid_from": "2026-09-10",
+   "valid_to": "2026-10-21",
+   "days": 42,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8115237,
+   "name": "Fall's Best Beauty",
+   "valid_from": "2026-09-10",
+   "valid_to": "2026-10-21",
+   "days": 42,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
+   "store": "Costco",
+   "merchant": "Costco",
+   "flyer_id": 8177335,
+   "name": "Flyer",
+   "valid_from": "2026-10-05",
+   "valid_to": "2026-10-11",
+   "days": 7,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
+   "store": "Costco",
+   "merchant": "Costco",
+   "flyer_id": 8177073,
+   "name": "Costco Grocery",
+   "valid_from": "2026-10-05",
+   "valid_to": "2026-10-11",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "No Frills",
+   "merchant": "No Frills",
+   "flyer_id": 8173787,
+   "name": "Weekly Flyer - Valid Thursday, October 8 - Wednesday, October 14",
+   "valid_from": "2026-10-08",
+   "valid_to": "2026-10-14",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+  "site_title": "Runnymede Grocery Deals",
+  "postal_code": "M6S1N3",
+  "locale": "en-ca",
+  "stores": ["No Frills", "FreshCo", "Loblaws", "Walmart", "Costco"],
+  "exclude_merchants": ["Chalo FreshCo"],
+  "flyer_max_days": 14,
+  "flyer_rules": {
+    "No Frills": {
+      "include_name_any": ["weekly flyer"]
+    },
+    "FreshCo": {
+      "include_name_any": ["weekly eflyer", "weekly flyer"]
+    },
+    "Loblaws": {
+      "include_name_any": ["weekly flyer"]
+    },
+    "Walmart": {
+      "include_name_any": ["flyer"]
+    },
+    "Costco": {
+      "include_name_any": ["costco grocery"]
+    }
+  },
+  "history_days": 365,
+  "history_keep_days": 730,
+  "request_delay_seconds": 0.15,
+  "fetch_item_details": true,
+  "item_detail_scope": "watchlist_candidates",
+  "watchlist": [
+    {
+      "id": "yogurt",
+      "label": "Yogurt (Krema / Liberté)",
+      "emoji": "🥣",
+      "match_any": ["yogurt*", "yogourt*", "yoghurt*"],
+      "require_any": ["krema", "liberte"],
+      "exclude_any": ["gerber", "puree", "drink*", "beverage*", "covered", "pretzel*", "raisin*", "bar*", "tube*"],
+      "preferred_unit": "kg",
+      "display_unit": "lb"
+    },
+    {
+      "id": "blueberries",
+      "label": "Blueberries",
+      "emoji": "🫐",
+      "match_any": ["blueberr*", "bleuet*"],
+      "require_any": [],
+      "exclude_any": ["muffin*", "bagel*", "jam*", "pie*", "waffle*", "cereal*", "bar*", "yogurt*", "yogourt*", "juice*", "bread*", "pancake*", "chocolate*", "candy", "flavour*", "flavor*"],
+      "preferred_unit": "kg",
+      "display_unit": "lb"
+    },
+    {
+      "id": "blackberries",
+      "label": "Blackberries",
+      "emoji": "🍇",
+      "match_any": ["blackberr*", "mûre*", "mure*"],
+      "require_any": [],
+      "exclude_any": ["jam", "pie", "juice", "yogurt", "yogourt"],
+      "preferred_unit": "kg",
+      "display_unit": "lb",
+      "baseline": {
+        "store": "Green Thumb",
+        "label": "Organic blackberries",
+        "price": 3.00,
+        "unit": "tray",
+        "weight_lb": 0.375,
+        "package_label": "6 oz tray"
+      }
+    },
+    {
+      "id": "raspberries",
+      "label": "Raspberries",
+      "emoji": "🍓",
+      "match_any": ["raspberr*", "framboise*"],
+      "require_any": [],
+      "exclude_any": ["jam", "pie", "juice", "yogurt", "yogourt", "vinaigrette", "bar", "lemonade"],
+      "preferred_unit": "kg",
+      "display_unit": "lb",
+      "baseline": {
+        "store": "Green Thumb",
+        "label": "Organic raspberries",
+        "price": 3.00,
+        "unit": "tray",
+        "weight_lb": 0.375,
+        "package_label": "6 oz tray"
+      }
+    },
+    {
+      "id": "strawberries",
+      "label": "Strawberries",
+      "emoji": "🍓",
+      "match_any": ["strawberr*", "fraise*"],
+      "require_any": [],
+      "exclude_any": ["jam*", "pie*", "juice*", "yogurt*", "yogourt*", "milk", "bar*", "lemonade", "rhubarb", "tomato*", "flavour*", "flavor*"],
+      "preferred_unit": "kg",
+      "display_unit": "lb",
+      "baseline": {
+        "store": "Green Thumb",
+        "label": "Strawberries",
+        "price": 5.00,
+        "unit": "tray",
+        "weight_lb": 1.0,
+        "package_label": "1 lb large tray"
+      }
+    },
+    {
+      "id": "apples",
+      "label": "Apples",
+      "emoji": "🍎",
+      "match_any": ["apple", "apples", "pomme", "pommes"],
+      "require_any": [],
+      "exclude_any": ["honeycrisp*", "honey crisp", "pineapple*", "applesauce", "apple sauce", "apple watch", "applewood", "juice*", "cider*", "vinegar", "crab", "pie*", "turnover*", "strudel*", "chips", "butter", "crumble", "danish", "fritter*", "candy", "pommes de terre", "puree", "yogurt*", "yogourt*"],
+      "summary_variants": ["Ambrosia", "Braeburn", "Cosmic Crisp", "Cortland", "Crispin", "Empire", "Envy", "Fuji", "Gala", "Golden Delicious", "Granny Smith", "Jazz", "Jonagold", "Macoun", "McIntosh", "Mutsu", "Paula Red", "Pink Lady", "Red Delicious", "Rave", "Spartan"],
+      "preferred_unit": "kg",
+      "display_unit": "lb",
+      "baseline": {
+        "store": "Green Thumb",
+        "label": "Ambrosia apples",
+        "price": 2.00,
+        "unit": "lb",
+        "package_label": "Per-pound reference"
+      }
+    },
+    {
+      "id": "honeycrisp",
+      "label": "Honeycrisp Apples",
+      "emoji": "🍎",
+      "match_any": ["honeycrisp*", "honey crisp"],
+      "require_any": ["apple", "apples", "pomme", "pommes"],
+      "exclude_any": ["applesauce", "apple sauce", "juice*", "cider*", "vinegar", "pie*", "turnover*", "strudel*", "chips", "butter", "crumble", "danish", "fritter*", "candy", "puree", "yogurt*", "yogourt*"],
+      "preferred_unit": "kg",
+      "display_unit": "lb"
+    },
+    {
+      "id": "oranges",
+      "label": "Oranges",
+      "emoji": "🍊",
+      "match_any": ["orange", "oranges", "clementine*", "mandarin*"],
+      "require_any": [],
+      "exclude_any": ["juice*", "soda", "drink*", "beverage*", "chicken", "chocolate*", "extract", "beef", "duck", "crush", "fanta", "pekoe", "flavour*", "flavor*"],
+      "preferred_unit": "kg",
+      "display_unit": "lb"
+    },
+    {
+      "id": "bananas",
+      "label": "Bananas",
+      "emoji": "🍌",
+      "match_any": ["banana", "bananas", "banane", "bananes"],
+      "require_any": [],
+      "exclude_any": ["banana republic", "bread", "muffin*", "chips", "loaf", "cream pie", "split", "boat", "pepper*", "puree", "yogurt*", "yogourt*", "flavour*", "flavor*"],
+      "preferred_unit": "kg",
+      "display_unit": "lb"
+    }
+  ]
+}

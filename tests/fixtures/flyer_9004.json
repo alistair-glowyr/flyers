@@ -1,0 +1,60 @@
+{
+ "id": 9004,
+ "merchant": "Loblaws",
+ "merchant_id": 9004,
+ "name": "Weekly Flyer",
+ "valid_from": "2026-07-09T00:00:00-04:00",
+ "valid_to": "2026-07-15T23:59:59-04:00",
+ "categories": [
+  "Groceries"
+ ],
+ "postal_code": "M6S1N3",
+ "locale": "en-ca",
+ "items": [
+  {
+   "id": 500019,
+   "flyer_id": 9004,
+   "name": "LIBERTÉ GREEK YOGURT, 750 g",
+   "display_type": 1,
+   "brand": "Liberté",
+   "cutout_image_url": "",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "discount": null,
+   "price": "6.99",
+   "print_id": "SKU500019",
+   "short_name": null,
+   "text_areas": []
+  },
+  {
+   "id": 500020,
+   "flyer_id": 9004,
+   "name": "STRAWBERRIES, 1 LB CLAMSHELL",
+   "display_type": 1,
+   "brand": null,
+   "cutout_image_url": "",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "discount": null,
+   "price": "3.99",
+   "print_id": "SKU500020",
+   "short_name": null,
+   "text_areas": []
+  },
+  {
+   "id": 500021,
+   "flyer_id": 9004,
+   "name": "ORANGE JUICE, 1.54 L",
+   "display_type": 1,
+   "brand": "Tropicana",
+   "cutout_image_url": "",
+   "valid_from": "2026-07-09T00:00:00-04:00",
+   "valid_to": "2026-07-15T23:59:59-04:00",
+   "discount": null,
+   "price": "4.99",
+   "print_id": "SKU500021",
+   "short_name": null,
+   "text_areas": []
+  }
+ ]
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>My Items · Runnymede Grocery Deals</title>
+<style>
+:root{
+  --bg:#f6f5f2; --card:#ffffff; --ink:#1d1c1a; --muted:#6f6c66;
+  --line:#e6e3dc; --accent:#1a7f4b; --accent-ink:#ffffff;
+  --best:#fff7e0; --best-line:#e8c96a; --baseline:#eef5ff; --baseline-line:#9dbce8;
+  --good:#16713f; --bad:#a13b32; --shadow:0 1px 3px rgba(0,0,0,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#161513; --card:#211f1c; --ink:#f0eee9; --muted:#a39f97;
+         --line:#37342f; --best:#2c2718; --best-line:#7a6a33;
+         --baseline:#182536; --baseline-line:#486b96; --good:#73c994; --bad:#ef9187;
+         --shadow:none; }
+}
+*{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+     background:var(--bg);color:var(--ink);font-size:16px;line-height:1.4}
+a{color:inherit}
+header{position:sticky;top:0;z-index:10;background:var(--bg);
+       border-bottom:1px solid var(--line);padding:10px 14px 0}
+h1{font-size:1.15rem;margin:0 0 2px}
+.sub{color:var(--muted);font-size:.8rem;margin:0 0 8px}
+nav{display:flex;gap:6px;margin-bottom:-1px}
+nav a{flex:1;text-align:center;padding:9px 4px;text-decoration:none;font-weight:600;
+      font-size:.95rem;color:var(--muted);border-bottom:3px solid transparent;border-radius:6px 6px 0 0}
+nav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+main{padding:12px 14px 60px;max-width:900px;margin:0 auto}
+.controls{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+input[type=search]{width:100%;padding:10px 12px;font-size:1rem;border:1px solid var(--line);
+     border-radius:10px;background:var(--card);color:var(--ink)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);
+      padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:600;cursor:pointer}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.storehead{display:flex;align-items:center;gap:8px;margin:18px 0 8px}
+.storehead .dot{width:12px;height:12px;border-radius:50%}
+.storehead h2{font-size:1.02rem;margin:0}
+.storehead .n{color:var(--muted);font-size:.8rem;font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+      padding:10px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:4px}
+.card img{width:100%;height:92px;object-fit:contain;border-radius:6px;background:#fff}
+.iname{font-size:.83rem;font-weight:600;line-height:1.25;
+       display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:1.12rem;font-weight:800}
+.uprice{color:var(--muted);font-size:.78rem}
+.basis{color:var(--muted);font-size:.72rem}
+.story{color:#b3541e;font-size:.72rem;font-weight:600}
+.badge{display:inline-block;color:#fff;font-size:.68rem;font-weight:700;
+       padding:2px 7px;border-radius:6px;letter-spacing:.02em}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+.summary{background:var(--card);border:1px solid var(--line);border-radius:14px;
+         padding:14px;margin-bottom:18px;box-shadow:var(--shadow)}
+.summary h2{margin:0 0 10px;font-size:1rem}
+.sumrow{display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line);font-size:.9rem}
+.sumrow:first-of-type{border-top:none}
+.sumrow .cat{flex:1;font-weight:600}
+.sumrow .p{font-weight:800}
+.wl{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px;margin-bottom:16px;box-shadow:var(--shadow)}
+.wl h2{margin:0 0 2px;font-size:1.05rem}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
+.stat{background:var(--bg);border:1px solid var(--line);border-radius:10px;
+      padding:7px 10px;text-align:center;min-width:74px}
+.stat .v{font-weight:800;font-size:.95rem}
+.stat .k{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.04em}
+.stat .u{color:var(--muted);font-size:.68rem}
+.obs{color:var(--muted);font-size:.72rem;margin:-4px 0 10px}
+.deal{display:flex;align-items:center;gap:10px;padding:8px;border-radius:10px;border:1px solid transparent}
+.deal.best{background:var(--best);border-color:var(--best-line)}
+.deal.baseline{background:var(--baseline);border-color:var(--baseline-line);margin:6px 0}
+.deal img{width:44px;height:44px;object-fit:contain;border-radius:6px;background:#fff;flex:0 0 auto}
+.deal .mid{flex:1;min-width:0}
+.deal .nm{font-size:.85rem;font-weight:600;line-height:1.25}
+.deal .meta{color:var(--muted);font-size:.75rem}
+.deal .pr{text-align:right}
+.deal .pr .p{font-weight:800;font-size:1rem}
+.deal .pr .u{color:var(--muted);font-size:.72rem}
+.deal .pr .cmp{font-size:.68rem;font-weight:700;white-space:nowrap}
+.deal .pr .cmp.good{color:var(--good)}
+.deal .pr .cmp.bad{color:var(--bad)}
+.deal .pr .cmp.same{color:var(--muted)}
+.baselinebadge{display:inline-block;background:var(--baseline-line);color:#142d4f;font-size:.62rem;
+               font-weight:800;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
+.bestbadge{display:inline-block;background:var(--best-line);color:#3a2f0d;font-size:.62rem;
+           font-weight:800;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
+.nodeal{color:var(--muted);font-size:.85rem;padding:4px 0}
+footer{color:var(--muted);font-size:.72rem;text-align:center;padding:20px 14px 30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Runnymede Grocery Deals</h1>
+  <p class="sub">Week of 2026-10-10 · your usual items, cheapest store first</p>
+  <nav>
+    <a href="deals.html" class="">All Deals</a>
+    <a href="index.html" class="on">My Items</a>
+  </nav>
+</header>
+<main>
+<div class="summary"><h2>🛒 Where to go this week</h2><div class="sumrow"><span>🥣</span>
+<span class="cat">Yogurt (Krema / Liberté)</span>
+<span class="badge" style="background:#0071ce">Walmart</span>
+<span class="p">$3.47 ea</span></div><div class="sumrow"><span>🫐</span>
+<span class="cat">Blueberries</span>
+<span class="badge" style="background:#2e9e4f">FreshCo</span>
+<span class="p">$3.99</span></div><div class="sumrow"><span>🍇</span>
+<span class="cat">Blackberries</span>
+<span class="badge" style="background:#1a7f4b">Green Thumb</span>
+<span class="p">$8.00/lb</span></div><div class="sumrow"><span>🍓</span>
+<span class="cat">Raspberries</span>
+<span class="badge" style="background:#0071ce">Walmart</span>
+<span class="p">$2.44 ea</span></div><div class="sumrow"><span>🍓</span>
+<span class="cat">Strawberries</span>
+<span class="badge" style="background:#1a7f4b">Green Thumb</span>
+<span class="p">$5.00/lb</span></div><div class="sumrow"><span>🍎</span>
+<span class="cat">Apples (Gala)</span>
+<span class="badge" style="background:#0071ce">Walmart</span>
+<span class="p">$0.98/lb</span></div><div class="sumrow"><span>🍎</span>
+<span class="cat">Honeycrisp Apples</span>
+<span class="badge" style="background:#e57200">Loblaws</span>
+<span class="p">$2.00/lb</span></div><div class="sumrow"><span>🍊</span>
+<span class="cat">Oranges</span>
+<span class="badge" style="background:#e57200">Loblaws</span>
+<span class="p">$2.25/lb</span></div></div><section class="wl">
+<h2>🥣 Yogurt (Krema / Liberté)</h2>
+<div class="stats">
+<div class="stat"><div class="k">1-yr low</div><div class="v">$3.47</div><div class="u"> ea</div></div>
+<div class="stat"><div class="k">median</div><div class="v">$3.47</div><div class="u"> ea</div></div>
+<div class="stat"><div class="k">1-yr high</div><div class="v">$3.47</div><div class="u"> ea</div></div>
+</div><p class="obs">1 price points over the last year</p><div class="deal">
+<img src="http://f.wishabi.net/page_items/436172377/1791173093/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Liberté Méditerranée yogurt tubs</div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$3.47</div><div class="u">$3.47 ea</div></div>
+</div>
+</section><section class="wl">
+<h2>🫐 Blueberries</h2>
+<p class="obs">No history yet — stats build up as weekly runs accumulate.</p><div class="deal">
+<img src="http://f.wishabi.net/page_items/436400828/1790988150/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Green Seedless Grapes Product of USA No. 1 Grade 8.80/kg or Blueberries Product of Peru No. 1 Grade 1 lb or Strawberries Product of USA No. 1 Grade 454 g</div>
+<div class="meta">FreshCo · ambiguous package</div></div>
+<div class="pr"><div class="p">$3.99</div><div class="u"></div></div>
+</div>
+</section><section class="wl">
+<h2>🍇 Blackberries</h2>
+<p class="obs">No history yet — stats build up as weekly runs accumulate.</p><div class="deal baseline">
+<div style="width:44px;text-align:center;font-size:1.35rem">📌</div>
+<div class="mid"><div class="nm">Organic blackberries<span class="baselinebadge">GREEN THUMB</span><span class="bestbadge">BEST</span></div>
+<div class="meta">6 oz tray</div></div>
+<div class="pr"><div class="p">$3.00</div><div class="u">$8.00/lb</div></div>
+</div><p class="nodeal">No deals on this in this week's flyers.</p>
+</section><section class="wl">
+<h2>🍓 Raspberries</h2>
+<div class="stats">
+<div class="stat"><div class="k">1-yr low</div><div class="v">$2.44</div><div class="u"> ea</div></div>
+<div class="stat"><div class="k">median</div><div class="v">$3.22</div><div class="u"> ea</div></div>
+<div class="stat"><div class="k">1-yr high</div><div class="v">$4.00</div><div class="u"> ea</div></div>
+</div><p class="obs">2 price points over the last year</p><div class="deal baseline">
+<div style="width:44px;text-align:center;font-size:1.35rem">📌</div>
+<div class="mid"><div class="nm">Organic raspberries<span class="baselinebadge">GREEN THUMB</span></div>
+<div class="meta">6 oz tray</div></div>
+<div class="pr"><div class="p">$3.00</div><div class="u">$8.00/lb</div></div>
+</div><div class="deal best">
+<img src="http://f.wishabi.net/page_items/436171409/1791173064/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Raspberries<span class="bestbadge">BEST</span></div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$2.44</div><div class="u">$2.44 ea</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436390485/1790982592/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">RASPBERRIES</div>
+<div class="meta">Loblaws</div></div>
+<div class="pr"><div class="p">$4.00</div><div class="u">$4.00 ea</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436400800/1790988139/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Raspberries 170 g Product of USA or Mexico or Red Cherry Tomatoes 340 g Product of Ontario, Canada No. 1</div>
+<div class="meta">FreshCo · ambiguous package</div></div>
+<div class="pr"><div class="p">$1.99</div><div class="u"></div></div>
+</div>
+</section><section class="wl">
+<h2>🍓 Strawberries</h2>
+<div class="stats">
+<div class="stat"><div class="k">1-yr low</div><div class="v">$8.67</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">median</div><div class="v">$8.67</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">1-yr high</div><div class="v">$8.67</div><div class="u">/lb</div></div>
+</div><p class="obs">1 price points over the last year</p><div class="deal baseline">
+<div style="width:44px;text-align:center;font-size:1.35rem">📌</div>
+<div class="mid"><div class="nm">Strawberries<span class="baselinebadge">GREEN THUMB</span><span class="bestbadge">BEST</span></div>
+<div class="meta">1 lb large tray</div></div>
+<div class="pr"><div class="p">$5.00</div><div class="u">$5.00/lb</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436392231/1790982585/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">PC® GREENHOUSE GROWN STRAWBERRIES, 340 G</div>
+<div class="meta">Loblaws</div></div>
+<div class="pr"><div class="p">$6.50</div><div class="u">$8.67/lb</div><div class="cmp bad">$3.67 above Green Thumb</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436400828/1790988150/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Green Seedless Grapes Product of USA No. 1 Grade 8.80/kg or Blueberries Product of Peru No. 1 Grade 1 lb or Strawberries Product of USA No. 1 Grade 454 g</div>
+<div class="meta">FreshCo · ambiguous package</div></div>
+<div class="pr"><div class="p">$3.99</div><div class="u"></div></div>
+</div>
+</section><section class="wl">
+<h2>🍎 Apples</h2>
+<div class="stats">
+<div class="stat"><div class="k">1-yr low</div><div class="v">$0.98</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">median</div><div class="v">$0.98</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">1-yr high</div><div class="v">$1.49</div><div class="u">/lb</div></div>
+</div><p class="obs">4 price points over the last year · also seen: $3.98–$4.98 ea (2 obs)</p><div class="deal baseline">
+<div style="width:44px;text-align:center;font-size:1.35rem">📌</div>
+<div class="mid"><div class="nm">Ambrosia apples<span class="baselinebadge">GREEN THUMB</span></div>
+<div class="meta">Per-pound reference</div></div>
+<div class="pr"><div class="p">$2.00/lb</div></div>
+</div><div class="deal best">
+<img src="http://f.wishabi.net/page_items/436315723/1791173090/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Bulk Gala apples<span class="bestbadge">BEST</span></div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$0.98/lb</div><div class="u"></div><div class="cmp good">$1.02 below Green Thumb</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436173377/1791173098/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Bulk McIntosh or Gala apples</div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$0.98/lb</div><div class="u"></div><div class="cmp good">$1.02 below Green Thumb</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436315718/1791173088/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Bulk McIntosh apples</div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$0.98/lb</div><div class="u"></div><div class="cmp good">$1.02 below Green Thumb</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436400823/1790988145/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Gala or McIntosh Apples Product of Ontario, Canada Extra Fancy 3.28/kg</div>
+<div class="meta">FreshCo</div></div>
+<div class="pr"><div class="p">$1.49/lb</div><div class="u"></div><div class="cmp good">$0.51 below Green Thumb</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436315715/1791173087/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Your Fresh Market™ Red Delicious apples</div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$3.98</div><div class="u">$3.98 ea</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436315733/1791173091/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Your Fresh Market Rave Apples</div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$4.98</div><div class="u">$4.98 ea</div></div>
+</div>
+</section><section class="wl">
+<h2>🍎 Honeycrisp Apples</h2>
+<div class="stats">
+<div class="stat"><div class="k">1-yr low</div><div class="v">$2.00</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">median</div><div class="v">$2.24</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">1-yr high</div><div class="v">$2.48</div><div class="u">/lb</div></div>
+</div><p class="obs">2 price points over the last year</p><div class="deal best">
+<img src="http://f.wishabi.net/page_items/436624400/1791307944/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">PC® EXTRA LARGE GREEN OR RED SEEDLESS GRAPES OR HONEYCRISP APPLES<span class="bestbadge">BEST</span></div>
+<div class="meta">Loblaws</div></div>
+<div class="pr"><div class="p">$2.00/lb</div><div class="u"></div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436315713/1791173087/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Bulk Honeycrisp apples</div>
+<div class="meta">Walmart</div></div>
+<div class="pr"><div class="p">$2.48/lb</div><div class="u"></div></div>
+</div>
+</section><section class="wl">
+<h2>🍊 Oranges</h2>
+<div class="stats">
+<div class="stat"><div class="k">1-yr low</div><div class="v">$2.25</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">median</div><div class="v">$3.62</div><div class="u">/lb</div></div>
+<div class="stat"><div class="k">1-yr high</div><div class="v">$4.99</div><div class="u">/lb</div></div>
+</div><p class="obs">2 price points over the last year</p><div class="deal best">
+<img src="http://f.wishabi.net/page_items/436390484/1790982591/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Farmer&#x27;s Market · FARMERS MARKET™ LEMONS OR PC® ORRI MANDARINS, 2 LB<span class="bestbadge">BEST</span></div>
+<div class="meta">Loblaws</div></div>
+<div class="pr"><div class="p">$4.50</div><div class="u">$2.25/lb</div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436400817/1790988140/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Sumo Oranges Product of Australia 11.00/kg</div>
+<div class="meta">FreshCo</div></div>
+<div class="pr"><div class="p">$4.99/lb</div><div class="u"></div></div>
+</div><div class="deal">
+<img src="http://f.wishabi.net/page_items/436400821/1790988143/extra_large.jpg" loading="lazy" alt="" onerror="this.style.display='none'">
+<div class="mid"><div class="nm">Gold Kiwi 454 g Product of New Zealand or Compliments Oranges 3 lb Product of South Africa 1.36 kg</div>
+<div class="meta">FreshCo · ambiguous package · 50 Scene+ PTS when you buy 1</div></div>
+<div class="pr"><div class="p">$4.99</div><div class="u"></div></div>
+</div>
+</section><section class="wl">
+<h2>🍌 Bananas</h2>
+<p class="obs">No history yet — stats build up as weekly runs accumulate.</p><p class="nodeal">No deals on this in this week's flyers.</p>
+</section>
+</main>
+<footer>Prices from public store flyers via Flipp · for personal use ·
+updated automatically by GitHub Actions</footer>
+</body>
+</html>
