@@ -1,105 +1,17 @@
 {
- "generated": "2026-10-15",
+ "generated": "2026-10-22",
  "postal_code": "M6S1N3",
  "candidates": [
   {
    "store": "Loblaws",
    "merchant": "Loblaws",
-   "flyer_id": 8184227,
-   "name": "Weekly Flyer - Valid Thursday, October 15 - Wednesday, October 21",
-   "valid_from": "2026-10-15",
-   "valid_to": "2026-10-21",
-   "days": 7,
-   "selected": true,
-   "reason": "selected"
-  },
-  {
-   "store": "Costco",
-   "merchant": "Costco",
-   "flyer_id": 8187148,
-   "name": "Costco Grocery",
-   "valid_from": "2026-10-12",
-   "valid_to": "2026-10-18",
-   "days": 7,
-   "selected": true,
-   "reason": "selected"
-  },
-  {
-   "store": "Walmart",
-   "merchant": "Walmart",
-   "flyer_id": 8186423,
-   "name": "Diwali",
-   "valid_from": "2026-10-15",
-   "valid_to": "2026-11-11",
-   "days": 28,
-   "selected": false,
-   "reason": "flyer name is not allow-listed"
-  },
-  {
-   "store": "Walmart",
-   "merchant": "Walmart",
-   "flyer_id": 8189026,
-   "name": "Gaming Guide",
-   "valid_from": "2026-10-15",
+   "flyer_id": 8191789,
+   "name": "Weekly Flyer - Valid Thursday, October 22 - Wednesday, October 28",
+   "valid_from": "2026-10-22",
    "valid_to": "2026-10-28",
-   "days": 14,
-   "selected": false,
-   "reason": "flyer name is not allow-listed"
-  },
-  {
-   "store": "FreshCo",
-   "merchant": "FreshCo",
-   "flyer_id": 8180944,
-   "name": "Diwali Low Prices",
-   "valid_from": "2026-10-15",
-   "valid_to": "2026-11-11",
-   "days": 28,
-   "selected": false,
-   "reason": "flyer name is not allow-listed"
-  },
-  {
-   "store": "Costco",
-   "merchant": "Costco",
-   "flyer_id": 8187325,
-   "name": "Flyer",
-   "valid_from": "2026-10-12",
-   "valid_to": "2026-10-18",
-   "days": 7,
-   "selected": false,
-   "reason": "flyer name is not allow-listed"
-  },
-  {
-   "store": "Walmart",
-   "merchant": "Walmart",
-   "flyer_id": 8185026,
-   "name": "Flyer",
-   "valid_from": "2026-10-15",
-   "valid_to": "2026-10-21",
    "days": 7,
    "selected": true,
    "reason": "selected"
-  },
-  {
-   "store": "FreshCo",
-   "merchant": "FreshCo",
-   "flyer_id": 8182391,
-   "name": "Weekly eFlyer 10/15-10/21",
-   "valid_from": "2026-10-15",
-   "valid_to": "2026-10-21",
-   "days": 7,
-   "selected": true,
-   "reason": "selected"
-  },
-  {
-   "store": "Walmart",
-   "merchant": "Walmart",
-   "flyer_id": 8110584,
-   "name": "Ready for Fall",
-   "valid_from": "2026-09-10",
-   "valid_to": "2026-10-21",
-   "days": 42,
-   "selected": false,
-   "reason": "flyer name is not allow-listed"
   },
   {
    "store": "Walmart",
@@ -115,17 +27,6 @@
   {
    "store": "Walmart",
    "merchant": "Walmart",
-   "flyer_id": 8115265,
-   "name": "Fall's Best Beauty",
-   "valid_from": "2026-09-10",
-   "valid_to": "2026-10-21",
-   "days": 42,
-   "selected": false,
-   "reason": "flyer name is not allow-listed"
-  },
-  {
-   "store": "Walmart",
-   "merchant": "Walmart",
    "flyer_id": 8172496,
    "name": "The Halloween Hub",
    "valid_from": "2026-10-01",
@@ -135,15 +36,92 @@
    "reason": "flyer name is not allow-listed"
   },
   {
-   "store": "No Frills",
-   "merchant": "No Frills",
-   "flyer_id": 8183642,
-   "name": "Weekly Flyer - Valid Thursday, October 15- Wednesday, October 21",
-   "valid_from": "2026-10-15",
-   "valid_to": "2026-10-21",
+   "store": "FreshCo",
+   "merchant": "FreshCo",
+   "flyer_id": 8191355,
+   "name": "Weekly eFlyer 10/22 - 10/28",
+   "valid_from": "2026-10-22",
+   "valid_to": "2026-10-28",
    "days": 7,
    "selected": true,
    "reason": "selected"
+  },
+  {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8194765,
+   "name": "Flyer",
+   "valid_from": "2026-10-22",
+   "valid_to": "2026-10-28",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "FreshCo",
+   "merchant": "FreshCo",
+   "flyer_id": 8180944,
+   "name": "Diwali Low Prices",
+   "valid_from": "2026-10-15",
+   "valid_to": "2026-11-11",
+   "days": 28,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
+   "store": "Costco",
+   "merchant": "Costco",
+   "flyer_id": 8194267,
+   "name": "Flyer",
+   "valid_from": "2026-10-19",
+   "valid_to": "2026-10-25",
+   "days": 7,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8186423,
+   "name": "Diwali",
+   "valid_from": "2026-10-15",
+   "valid_to": "2026-11-11",
+   "days": 28,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
+   "store": "Costco",
+   "merchant": "Costco",
+   "flyer_id": 8194100,
+   "name": "Costco Grocery",
+   "valid_from": "2026-10-19",
+   "valid_to": "2026-10-25",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "No Frills",
+   "merchant": "No Frills",
+   "flyer_id": 8191895,
+   "name": "Weekly Flyer - Valid Thursday, October 22 - Wednesday, October 28",
+   "valid_from": "2026-10-22",
+   "valid_to": "2026-10-28",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "Loblaws",
+   "merchant": "Loblaws",
+   "flyer_id": 8194189,
+   "name": "Toy Book - Valid Thursday, October 22 - Wednesday, December 30",
+   "valid_from": "2026-10-22",
+   "valid_to": "2026-12-30",
+   "days": 70,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
   }
  ]
 }
