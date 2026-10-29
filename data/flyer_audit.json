@@ -1,18 +1,7 @@
 {
- "generated": "2026-10-22",
+ "generated": "2026-10-29",
  "postal_code": "M6S1N3",
  "candidates": [
-  {
-   "store": "Loblaws",
-   "merchant": "Loblaws",
-   "flyer_id": 8191789,
-   "name": "Weekly Flyer - Valid Thursday, October 22 - Wednesday, October 28",
-   "valid_from": "2026-10-22",
-   "valid_to": "2026-10-28",
-   "days": 7,
-   "selected": true,
-   "reason": "selected"
-  },
   {
    "store": "Walmart",
    "merchant": "Walmart",
@@ -25,34 +14,23 @@
    "reason": "flyer name is not allow-listed"
   },
   {
-   "store": "Walmart",
-   "merchant": "Walmart",
-   "flyer_id": 8172496,
-   "name": "The Halloween Hub",
-   "valid_from": "2026-10-01",
-   "valid_to": "2026-10-31",
-   "days": 31,
+   "store": "Loblaws",
+   "merchant": "Loblaws",
+   "flyer_id": 8194189,
+   "name": "Toy Book - Valid Thursday, October 22 - Wednesday, December 30",
+   "valid_from": "2026-10-22",
+   "valid_to": "2026-12-30",
+   "days": 70,
    "selected": false,
    "reason": "flyer name is not allow-listed"
   },
   {
-   "store": "FreshCo",
-   "merchant": "FreshCo",
-   "flyer_id": 8191355,
-   "name": "Weekly eFlyer 10/22 - 10/28",
-   "valid_from": "2026-10-22",
-   "valid_to": "2026-10-28",
-   "days": 7,
-   "selected": true,
-   "reason": "selected"
-  },
-  {
    "store": "Walmart",
    "merchant": "Walmart",
-   "flyer_id": 8194765,
+   "flyer_id": 8203644,
    "name": "Flyer",
-   "valid_from": "2026-10-22",
-   "valid_to": "2026-10-28",
+   "valid_from": "2026-10-29",
+   "valid_to": "2026-11-04",
    "days": 7,
    "selected": true,
    "reason": "selected"
@@ -69,17 +47,6 @@
    "reason": "flyer name is not allow-listed"
   },
   {
-   "store": "Costco",
-   "merchant": "Costco",
-   "flyer_id": 8194267,
-   "name": "Flyer",
-   "valid_from": "2026-10-19",
-   "valid_to": "2026-10-25",
-   "days": 7,
-   "selected": false,
-   "reason": "flyer name is not allow-listed"
-  },
-  {
    "store": "Walmart",
    "merchant": "Walmart",
    "flyer_id": 8186423,
@@ -91,35 +58,79 @@
    "reason": "flyer name is not allow-listed"
   },
   {
-   "store": "Costco",
-   "merchant": "Costco",
-   "flyer_id": 8194100,
-   "name": "Costco Grocery",
-   "valid_from": "2026-10-19",
-   "valid_to": "2026-10-25",
+   "store": "FreshCo",
+   "merchant": "FreshCo",
+   "flyer_id": 8206916,
+   "name": "Weekly eFlyer 10/29 - 11/04",
+   "valid_from": "2026-10-29",
+   "valid_to": "2026-11-04",
    "days": 7,
    "selected": true,
    "reason": "selected"
+  },
+  {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8172496,
+   "name": "The Halloween Hub",
+   "valid_from": "2026-10-01",
+   "valid_to": "2026-10-31",
+   "days": 31,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
   },
   {
    "store": "No Frills",
    "merchant": "No Frills",
-   "flyer_id": 8191895,
-   "name": "Weekly Flyer - Valid Thursday, October 22 - Wednesday, October 28",
-   "valid_from": "2026-10-22",
-   "valid_to": "2026-10-28",
+   "flyer_id": 8207205,
+   "name": "Weekly Flyer - Valid Thursday, October 29 - Wednesday, November 04",
+   "valid_from": "2026-10-29",
+   "valid_to": "2026-11-04",
    "days": 7,
    "selected": true,
    "reason": "selected"
   },
   {
+   "store": "Walmart",
+   "merchant": "Walmart",
+   "flyer_id": 8188920,
+   "name": "Holiday in Style",
+   "valid_from": "2026-10-29",
+   "valid_to": "2026-11-25",
+   "days": 28,
+   "selected": false,
+   "reason": "flyer name is not allow-listed"
+  },
+  {
    "store": "Loblaws",
    "merchant": "Loblaws",
-   "flyer_id": 8194189,
-   "name": "Toy Book - Valid Thursday, October 22 - Wednesday, December 30",
-   "valid_from": "2026-10-22",
-   "valid_to": "2026-12-30",
-   "days": 70,
+   "flyer_id": 8207575,
+   "name": "Weekly Flyer - Valid Thursday, October 29 - Wednesday, November 04",
+   "valid_from": "2026-10-29",
+   "valid_to": "2026-11-04",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "Costco",
+   "merchant": "Costco",
+   "flyer_id": 8208945,
+   "name": "Costco Grocery",
+   "valid_from": "2026-10-26",
+   "valid_to": "2026-11-01",
+   "days": 7,
+   "selected": true,
+   "reason": "selected"
+  },
+  {
+   "store": "Costco",
+   "merchant": "Costco",
+   "flyer_id": 8208858,
+   "name": "Flyer",
+   "valid_from": "2026-10-26",
+   "valid_to": "2026-11-01",
+   "days": 7,
    "selected": false,
    "reason": "flyer name is not allow-listed"
   }
